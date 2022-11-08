@@ -2,7 +2,7 @@
   <div class="drawer">
     <app-sidebar (onToggleSideNav)="handleToggleSideNav($event)"></app-sidebar>
   </div>
-  <div class="drawer-content">
+  <div class="drawer-content" [ngClass]="getBodyClass()">
     <app-toolbar></app-toolbar>
     <router-outlet></router-outlet>
   </div>

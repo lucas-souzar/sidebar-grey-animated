@@ -18,4 +18,19 @@ export class PrivateRoutesComponent implements OnInit {
     this.isSidenavOpen = data.isOpen;
     this.screebWidth = data.screenWidth;
   }
+
+  public getBodyClass() {
+    let styleClass = '';
+    if (this.isSidenavOpen && this.screebWidth > 768) {
+      styleClass = 'body-trimmed';
+    } else if (
+      this.isSidenavOpen &&
+      this.screebWidth <= 768 &&
+      this.screebWidth > 0
+    ) {
+      styleClass = 'body-md-screen';
+    }
+
+    return styleClass;
+  }
 }

@@ -2,26 +2,26 @@ export const menu = [
   {
     name: 'Home',
     icon: 'home',
-    link: '',
+    link: 'home',
   },
   {
     name: 'Maps',
     icon: 'location_on',
-    link: '',
+    link: 'maps',
   },
   {
     name: 'Settings',
     icon: 'settings',
-    link: '',
+    link: 'settings',
   },
   {
     name: 'Accounts',
     icon: 'person',
-    link: '',
+    link: 'accounts',
   },
   {
     name: 'Security',
     icon: 'lock',
-    link: '',
+    link: 'security',
   },
 ];

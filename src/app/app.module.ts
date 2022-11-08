@@ -10,6 +10,11 @@ import { PublicRoutesComponent } from './shared/components/layouts/public-routes
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
+import { HomeComponent } from './views/home/home.component';
+import { MapsComponent } from './views/maps/maps.component';
+import { SettingsComponent } from './views/settings/settings.component';
+import { AccountsComponent } from './views/accounts/accounts.component';
+import { SecurityComponent } from './views/security/security.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +24,11 @@ import { ToolbarComponent } from './shared/components/toolbar/toolbar.component'
     NotFoundComponent,
     SidebarComponent,
     ToolbarComponent,
+    HomeComponent,
+    MapsComponent,
+    SettingsComponent,
+    AccountsComponent,
+    SecurityComponent,
   ],
   imports: [
     BrowserModule,
