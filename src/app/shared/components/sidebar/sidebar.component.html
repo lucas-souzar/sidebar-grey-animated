@@ -14,7 +14,12 @@
 
   <ul class="sidenav-nav">
     <li *ngFor="let item of menuItems" class="sidenav-nav-item">
-      <a class="sidenav-nav-link" [routerLink]="item.link">
+      <a
+        class="sidenav-nav-link"
+        [routerLink]="item.link"
+        [routerLinkActiveOptions]="{exact: true}"
+        routerLinkActive="active"
+      >
         <mat-icon fontSet="material-icons-outlined" class="sidenav-link-icon">{{
           item.icon
         }}</mat-icon>

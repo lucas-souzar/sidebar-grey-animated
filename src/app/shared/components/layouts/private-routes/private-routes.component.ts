@@ -22,13 +22,13 @@ export class PrivateRoutesComponent implements OnInit {
   public getBodyClass() {
     let styleClass = '';
     if (this.isSidenavOpen && this.screebWidth > 768) {
-      styleClass = 'body-trimmed';
+      styleClass = 'drawer-trimmed';
     } else if (
       this.isSidenavOpen &&
       this.screebWidth <= 768 &&
       this.screebWidth > 0
     ) {
-      styleClass = 'body-md-screen';
+      styleClass = 'drawer-md-screen';
     }
 
     return styleClass;

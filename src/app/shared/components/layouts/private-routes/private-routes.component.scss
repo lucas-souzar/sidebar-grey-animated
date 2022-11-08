@@ -3,12 +3,30 @@
   height: 100vh;
   display: flex;
 
-  .drawer {
-    width: 5rem;
+  .drawer-sidenav {
   }
 
   .drawer-content {
-    width: calc(100% - 5rem);
+    @extend .drawer-md-screen;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+    top: 0;
     background-color: #cbcbcb;
+    transition: all 0.5s ease;
+
+    .drawer-content-main {
+      padding: 2rem 2rem 0 2rem;
+    }
+  }
+
+  .drawer-trimmed {
+    width: calc(100% - 16rem);
+    margin-left: 16rem;
+  }
+
+  .drawer-md-screen {
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
   }
 }

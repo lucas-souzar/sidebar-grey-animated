@@ -95,6 +95,15 @@
   }
 }
 
+.active {
+  background-color: #ffffff;
+
+  .sidenav-link-icon,
+  .sidenav-link-text {
+    color: #000000;
+  }
+}
+
 button {
   background: transparent;
   padding: 0;
