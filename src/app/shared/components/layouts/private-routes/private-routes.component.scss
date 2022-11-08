@@ -4,12 +4,11 @@
   display: flex;
 
   .drawer {
-    width: 90px;
-    background-color: #533550;
+    width: 72px;
   }
 
   .drawer-content {
-    width: calc(100% - 90px);
-    background-color: #bebebe;
+    width: calc(100% - 72px);
+    background-color: #cbcbcb;
   }
 }

@@ -1,6 +1,6 @@
 <div class="drawer-container">
   <div class="drawer">
-    <app-sidebar></app-sidebar>
+    <app-sidebar (onToggleSideNav)="handleToggleSideNav($event)"></app-sidebar>
   </div>
   <div class="drawer-content">
     <app-toolbar></app-toolbar>

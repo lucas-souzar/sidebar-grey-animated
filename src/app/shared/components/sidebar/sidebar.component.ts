@@ -1,15 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
+import { menu } from './sidebar.data';
+
+export interface ISideNavToggle {
+  screenWidth: number;
+  isOpen: boolean;
+}
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
+  @Output() onToggleSideNav: EventEmitter<ISideNavToggle> = new EventEmitter();
 
-  constructor() { }
+  public isOpen = false;
+  public screenWidth = 0;
+  public menuItems = menu;
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  public openSidenav() {
+    this.isOpen = !this.isOpen;
+    this.onToggleSideNav.emit({
+      isOpen: this.isOpen,
+      screenWidth: this.screenWidth,
+    });
   }
 
+  public closeSidenav() {
+    this.isOpen = false;
+    this.onToggleSideNav.emit({
+      isOpen: this.isOpen,
+      screenWidth: this.screenWidth,
+    });
+  }
 }
