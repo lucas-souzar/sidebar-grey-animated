@@ -8,7 +8,7 @@ import { ISideNavToggle } from '../../sidebar/sidebar.component';
 })
 export class PrivateRoutesComponent implements OnInit {
   public isSidenavOpen = false;
-  public screebWidth = 0;
+  public screenWidth = 0;
 
   constructor() {}
 
@@ -16,18 +16,20 @@ export class PrivateRoutesComponent implements OnInit {
 
   public handleToggleSideNav(data: ISideNavToggle) {
     this.isSidenavOpen = data.isOpen;
-    this.screebWidth = data.screenWidth;
+    this.screenWidth = data.screenWidth;
   }
 
   public getBodyClass() {
     let styleClass = '';
-    if (this.isSidenavOpen && this.screebWidth > 768) {
+    if (this.isSidenavOpen && this.screenWidth > 768) {
       styleClass = 'drawer-trimmed';
     } else if (
       this.isSidenavOpen &&
-      this.screebWidth <= 768 &&
-      this.screebWidth > 0
+      this.screenWidth <= 768 &&
+      this.screenWidth > 0
     ) {
+      styleClass = 'drawer-md-screen';
+    } else if (!this.isSidenavOpen) {
       styleClass = 'drawer-md-screen';
     }
 
