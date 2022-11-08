@@ -15,7 +15,9 @@
     transition: all 0.5s ease;
 
     .drawer-content-main {
-      padding: 2rem 2rem 0 2rem;
+      max-height: calc(100vh - 64px);
+      padding: 2rem;
+      overflow-y: auto;
     }
   }
 }

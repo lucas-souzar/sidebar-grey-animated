@@ -33,7 +33,7 @@ export class SidebarComponent implements OnInit {
 
   @Output() onToggleSideNav: EventEmitter<ISideNavToggle> = new EventEmitter();
 
-  public isOpen = true;
+  public isOpen = false;
   public screenWidth = 0;
   public menuItems = menu;
 
