@@ -17,6 +17,8 @@ import { MapsComponent } from './views/maps/maps.component';
 import { SettingsComponent } from './views/settings/settings.component';
 import { AccountsComponent } from './views/accounts/accounts.component';
 import { SecurityComponent } from './views/security/security.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ToastComponent } from './shared/components/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { SecurityComponent } from './views/security/security.component';
     SettingsComponent,
     AccountsComponent,
     SecurityComponent,
+    ToastComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { SecurityComponent } from './views/security/security.component';
     MatIconModule,
     MatCardModule,
     MatButtonModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

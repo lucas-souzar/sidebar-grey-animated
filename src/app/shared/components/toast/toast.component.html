@@ -1,0 +1,9 @@
+<div class="toast" [style]="{ background: types[data.type].background }">
+  <mat-icon class="toast-icon">{{ types[data.type].icon }}</mat-icon>
+
+  <div class="toast-messages">
+    <p class="message">{{ data.message }}</p>
+
+    <p *ngIf="data.subMessage" class="sub-message">{{ data.subMessage }}</p>
+  </div>
+</div>
